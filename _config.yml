@@ -1,2 +1,3 @@
 name: Pablo Ramón Guevara
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
