@@ -1,4 +1,24 @@
 name: Pablo Ramón Guevara
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+remote_theme: thelehhman/plainwhite-jekyll
+
+plainwhite:
+  name: Pablo R. Guevara
+  tagline: CE Student
+  
+  date_format: "%Y-%m-%d"
+
+  social_links:
+    github: praguevara
+
+  navigation:
+    - title: Home
+      url: "/"
+
+show_excerpts: true
