@@ -21,4 +21,6 @@ plainwhite:
     - title: Home
       url: "/"
 
+  analytics_id: "UA-159350617-1"
+
 show_excerpts: true
