@@ -12,7 +12,7 @@ Unlike _3000 Hanzi to learn first_, I wanted the deck to have words too. I had a
 
 ![Sample note](/assets/ultimate_anki_note_preview.png)
 
-After having fought for two days straight with Python's (nonexistent?) type-system, you can now access the finished result on my [GitHub repo](https://github.com/praguevara/UltimateChinese).
+After having fought for two days straight with Python's (nonexistent?) type-system, you can now access the finished result [here](/assets/ultimate.apkg) or on my [GitHub repo](https://github.com/praguevara/UltimateChinese).
 
 There are a total of 11119 cards in the deck.
 
