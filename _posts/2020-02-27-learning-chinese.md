@@ -10,7 +10,7 @@ My current approach is based on Anki, using four shared decks:
 
 * Phonetics: I mainly used it to learn how to pronounce those 10 initials that sound _the same_. I figured this would be helpful because I'd rather start slowly but without making mistakes than fixing those mistakes later. It's something I wish I had been taught with English because of all those damn vowels that don't exist in Spanish, but I suppose that's not a requirement for getting a low level English certificate.
 
-![Those pesky initials](/assets/pesky_initials.jpg)
+![Those pesky initials](/images/pesky_initials.jpg)
 
 After just one week I was done memorizing those.
 

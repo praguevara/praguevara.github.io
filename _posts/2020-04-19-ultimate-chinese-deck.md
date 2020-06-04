@@ -10,9 +10,9 @@ So, being bored and as the procrastinator that I am (because I had tons of assig
 
 Unlike _3000 Hanzi to learn first_, I wanted the deck to have words too. I had also found myself opening Pleco to check for the components of some characters, which is pretty tedious. That's why I've also added a full preorder traversal of the components with their meanings. 
 
-![Sample note](/assets/ultimate_anki_note_preview.png)
+![Sample note](/images/ultimate_anki_note_preview.png)
 
-After having fought for two days straight with Python's (nonexistent?) type-system, you can now access the finished result [here](/assets/ultimate.apkg) or on my [GitHub repo](https://github.com/praguevara/UltimateChinese).
+After having fought for two days straight with Python's (nonexistent?) type-system, you can now access the finished result [here](/images/ultimate.apkg) or on my [GitHub repo](https://github.com/praguevara/UltimateChinese).
 
 There are a total of 11119 cards in the deck.
 
