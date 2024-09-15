@@ -10,15 +10,15 @@
       flake = false;
     };
     hugo-config = {
-      url = "path:./hugo.toml";
+      url = "git+file:.?file=hugo.toml";
       flake = false;
     };
     content = {
-      url = "path:./content";
+      url = "git+file:.?dir=content";
       flake = false;
     };
     static = {
-      url = "path:./static";
+      url = "git+file:.?dir=static";
       flake = false;
     };
   };
@@ -47,13 +47,13 @@
             ln -s ${inputs.hugo-theme} themes/hugo-coder
 
             # Copy hugo.toml
-            cp ${inputs.hugo-config} hugo.toml
+            cp ${inputs.hugo-config}/hugo.toml hugo.toml
             
             # Copy content directory
-            cp -r ${inputs.content}/ content/
+            cp -r ${inputs.content}/content/ content/
 
             # Copy static directory
-            cp -r ${inputs.static}/ static/
+            cp -r ${inputs.static}/static/ static/
 
             ${pkgs.hugo}/bin/hugo --logLevel info
             ${pkgs.nodePackages.prettier}/bin/prettier -w public '!**/*.{js,css}'
@@ -61,7 +61,6 @@
           installPhase = ''
             mkdir -p $out
             cp -r public/* $out/
-            cp hugo_output.log $out/
           '';
         };
 

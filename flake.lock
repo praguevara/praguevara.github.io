@@ -3,27 +3,33 @@
     "content": {
       "flake": false,
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-d70YTTxv3LzRpmqeGNAdvrRf9e4IO6HnnoqpqGqA4Kg=",
-        "path": "./content",
-        "type": "path"
+        "dir": "content",
+        "dirtyRev": "7d415b2b03e192e40269bda8adffb6c72bd0f289-dirty",
+        "dirtyShortRev": "7d415b2-dirty",
+        "lastModified": 1726409492,
+        "narHash": "sha256-an0zUpbOetSvQktJCl94Z6rHbu69lo6ZMMw/EJn8tRE=",
+        "type": "git",
+        "url": "file:.?dir=content"
       },
       "original": {
-        "path": "./content",
-        "type": "path"
+        "dir": "content",
+        "type": "git",
+        "url": "file:.?dir=content"
       }
     },
     "hugo-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-8qvjSbMUtcX848PibQ/LBkhYe5zS4Fk//I+7U4Hoav8=",
-        "path": "./hugo.toml",
-        "type": "path"
+        "dirtyRev": "7d415b2b03e192e40269bda8adffb6c72bd0f289-dirty",
+        "dirtyShortRev": "7d415b2-dirty",
+        "lastModified": 1726409492,
+        "narHash": "sha256-an0zUpbOetSvQktJCl94Z6rHbu69lo6ZMMw/EJn8tRE=",
+        "type": "git",
+        "url": "file:.?file=hugo.toml"
       },
       "original": {
-        "path": "./hugo.toml",
-        "type": "path"
+        "type": "git",
+        "url": "file:.?file=hugo.toml"
       }
     },
     "hugo-theme": {
@@ -71,14 +77,18 @@
     "static": {
       "flake": false,
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-+DQR3Wvo589DezI3Pcnvke1BnTE/G/kL0Ao4P1vRI1U=",
-        "path": "./static",
-        "type": "path"
+        "dir": "static",
+        "dirtyRev": "7d415b2b03e192e40269bda8adffb6c72bd0f289-dirty",
+        "dirtyShortRev": "7d415b2-dirty",
+        "lastModified": 1726409492,
+        "narHash": "sha256-an0zUpbOetSvQktJCl94Z6rHbu69lo6ZMMw/EJn8tRE=",
+        "type": "git",
+        "url": "file:.?dir=static"
       },
       "original": {
-        "path": "./static",
-        "type": "path"
+        "dir": "static",
+        "type": "git",
+        "url": "file:.?dir=static"
       }
     },
     "systems": {
