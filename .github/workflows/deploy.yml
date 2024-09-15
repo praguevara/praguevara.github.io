@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -11,15 +12,23 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch all history for accurate Git info
+          fetch-depth: 0
 
       - name: Install Nix
-        uses: cachix/install-nix-action@v27
+        uses: cachix/install-nix-action@v25
         with:
           extra_nix_config: |
             experimental-features = nix-command flakes
+
+      - name: Cache Nix store
+        uses: actions/cache@v3
+        with:
+          path: /nix/store
+          key: ${{ runner.os }}-nix-${{ hashFiles('**/flake.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-nix-
 
       - name: Build Site with Nix
         run: nix build
@@ -30,4 +39,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./result
           publish_branch: gh-pages
-          force_orphan: true  # Creates gh-pages branch if it doesn't exist
+          force_orphan: true
