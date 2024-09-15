@@ -1,37 +1,5 @@
 {
   "nodes": {
-    "content": {
-      "flake": false,
-      "locked": {
-        "dir": "content",
-        "dirtyRev": "7d415b2b03e192e40269bda8adffb6c72bd0f289-dirty",
-        "dirtyShortRev": "7d415b2-dirty",
-        "lastModified": 1726409492,
-        "narHash": "sha256-an0zUpbOetSvQktJCl94Z6rHbu69lo6ZMMw/EJn8tRE=",
-        "type": "git",
-        "url": "file:.?dir=content"
-      },
-      "original": {
-        "dir": "content",
-        "type": "git",
-        "url": "file:.?dir=content"
-      }
-    },
-    "hugo-config": {
-      "flake": false,
-      "locked": {
-        "dirtyRev": "7d415b2b03e192e40269bda8adffb6c72bd0f289-dirty",
-        "dirtyShortRev": "7d415b2-dirty",
-        "lastModified": 1726409492,
-        "narHash": "sha256-an0zUpbOetSvQktJCl94Z6rHbu69lo6ZMMw/EJn8tRE=",
-        "type": "git",
-        "url": "file:.?file=hugo.toml"
-      },
-      "original": {
-        "type": "git",
-        "url": "file:.?file=hugo.toml"
-      }
-    },
     "hugo-theme": {
       "flake": false,
       "locked": {
@@ -66,29 +34,9 @@
     },
     "root": {
       "inputs": {
-        "content": "content",
-        "hugo-config": "hugo-config",
         "hugo-theme": "hugo-theme",
         "nixpkgs": "nixpkgs",
-        "static": "static",
         "utils": "utils"
-      }
-    },
-    "static": {
-      "flake": false,
-      "locked": {
-        "dir": "static",
-        "dirtyRev": "7d415b2b03e192e40269bda8adffb6c72bd0f289-dirty",
-        "dirtyShortRev": "7d415b2-dirty",
-        "lastModified": 1726409492,
-        "narHash": "sha256-an0zUpbOetSvQktJCl94Z6rHbu69lo6ZMMw/EJn8tRE=",
-        "type": "git",
-        "url": "file:.?dir=static"
-      },
-      "original": {
-        "dir": "static",
-        "type": "git",
-        "url": "file:.?dir=static"
       }
     },
     "systems": {

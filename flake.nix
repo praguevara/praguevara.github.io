@@ -1,6 +1,5 @@
 {
   description = "Personal website for praguevara";
-  # https://www.chrisportela.com/posts/this-site-is-a-flake/
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
@@ -9,18 +8,7 @@
       url = "github:luizdepra/hugo-coder";
       flake = false;
     };
-    hugo-config = {
-      url = "git+file:.?file=hugo.toml";
-      flake = false;
-    };
-    content = {
-      url = "git+file:.?dir=content";
-      flake = false;
-    };
-    static = {
-      url = "git+file:.?dir=static";
-      flake = false;
-    };
+    # Removed hugo-config, content, and static from inputs
   };
 
   outputs = inputs@{ self, nixpkgs, utils, ... }:
@@ -30,48 +18,49 @@
       utils.lib.system.aarch64-darwin
       utils.lib.system.aarch64-linux
     ]
-      (system:
-        let
-          pkgs = import nixpkgs {
-            inherit system;
-          };
-        in
-        rec {
-
-          packages.website = pkgs.stdenv.mkDerivation {
+    (system:
+      let
+        pkgs = import nixpkgs {
+          inherit system;
+        };
+      in
+      rec {
+        packages.website = pkgs.stdenv.mkDerivation {
           name = "website";
-          src = self;
+          src = self;  # 'self' refers to the flake's source
+
           buildInputs = [ pkgs.git pkgs.nodePackages.prettier ];
+
           buildPhase = ''
             mkdir -p themes
             ln -s ${inputs.hugo-theme} themes/hugo-coder
 
-            # Copy hugo.toml
-            cp ${inputs.hugo-config}/hugo.toml hugo.toml
-            
-            # Copy content directory
-            cp -r ${inputs.content}/content/ content/
+            # Copy hugo.toml directly from src
+            cp ${self}/hugo.toml hugo.toml
 
-            # Copy static directory
-            cp -r ${inputs.static}/static/ static/
+            # Copy content and static directories directly from src
+            cp -r ${self}/content/ content/
+            cp -r ${self}/static/ static/
 
             ${pkgs.hugo}/bin/hugo --logLevel info
             ${pkgs.nodePackages.prettier}/bin/prettier -w public '!**/*.{js,css}'
           '';
+
           installPhase = ''
             mkdir -p $out
             cp -r public/* $out/
           '';
         };
 
-          defaultPackage = self.packages.${system}.website;
+        defaultPackage = self.packages.${system}.website;
 
-          apps = rec {
-            hugo = utils.lib.mkApp { drv = pkgs.hugo; };
-            default = hugo;
-          };
+        apps = rec {
+          hugo = utils.lib.mkApp { drv = pkgs.hugo; };
+          default = hugo;
+        };
 
-          devShell =
-            pkgs.mkShell { buildInputs = [ pkgs.nixpkgs-fmt pkgs.hugo ]; };
-        });
+        devShell = pkgs.mkShell {
+          buildInputs = [ pkgs.nixpkgs-fmt pkgs.hugo ];
+        };
+      });
 }
