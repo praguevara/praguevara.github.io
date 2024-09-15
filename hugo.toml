@@ -1,45 +1,56 @@
-baseURL = 'https://praguevara.dev/'
+baseURL = 'https://www.praguevara.dev/'
 languageCode = 'en-us'
 title = "praguevara"
-theme = "hugo-coder"
+theme = "PaperMod"
 defaultContentLanguage = "en"
 
 [params]
 author = "Pablo Ramón Guevara"
-avatarURL = "images/avatar.jpg"
 description = "praguevara's site"
-keywords = "blog,developer,personal"
+keywords = ["blog", "developer", "personal"]
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowRssButtonInSectionTermList = true
+ShowToc = true
 
-[[params.social]]
-name = "GitHub"
-icon = "fab fa-github fa-2x"
+[params.profileMode]
+enabled = true
+title = "Pablo Ramón Guevara"
+subtitle = "Computer Engineer"
+imageUrl = "images/avatar.jpg"
+imageTitle = "portrait"
+
+[[params.socialIcons]]
+name = "github"
 url = "https://github.com/praguevara"
 
-[[params.social]]
-name = "Twitter"
-icon = "fab fa-x-twitter fa-2x"
+[[params.socialIcons]]
+name = "x"
 url = "https://x.com/praguevara"
 
-[[params.social]]
-name = "LinkedIn"
-icon = "fab fa-linkedin fa-2x"
+[[params.socialIcons]]
+name = "linkedin"
 url = "https://www.linkedin.com/in/pablo-ram%C3%B3n-guevara-498283165/"
 
-[languages.en]
-languageName = ":uk:"
-
-[[languages.en.menu.main]]
+[menu]
+[[menu.main]]
+identifier = "posts"
 name = "Blog"
-weight = 1
-url = "/posts"
+url = "/posts/"
+weight = 10
 
-[[languages.en.menu.main]]
+[[menu.main]]
+identifier = "about"
 name = "About"
-weight = 2
-url = "/about"
+url = "/about/"
+weight = 20
 
-[[languages.en.menu.main]]
+[[menu.main]]
+identifier = "cv"
 name = "CV"
-weight = 3
-url = "/cv"
+url = "/cv/"
+weight = 30
 

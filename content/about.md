@@ -2,6 +2,19 @@
 title: "About me"
 slug: "about"
 date: 2024-07
+showToc: false
+hidemeta: true
+comments: false
+disableHLJS: false
+disableShare: true
+hideSummary: false
+searchHidden: false
+ShowReadingTime: false
+ShowBreadCrumbs: false
+ShowPostNavLinks: true
+ShowWordCount: false
+ShowRssButtonInSectionTermList: true
+UseHugoToc: true
 ---
 
 Hello! I'm Pablo Ramón Guevara, a computer engineer from Spain. I graduated from the [University of Alicante](https://www.ua.es/) in 2023, with a degree in Computer Engineering and a specialization in computing in the High Performance group. You can read my final degree project [here](https://rua.ua.es/dspace/handle/10045/136544).

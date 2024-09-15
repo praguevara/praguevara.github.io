@@ -15,7 +15,7 @@ title: "Curriculum Vitae"
 slug: "cv"
 ---
 
-_Download the PDF version [here](/pablo_ramon_guevara_cv.pdf)._
+> Download the PDF version [here](/pablo_ramon_guevara_cv.pdf)
 
 # Summary
 

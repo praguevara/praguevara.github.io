@@ -13,7 +13,7 @@ also found myself opening Pleco to check for the components of some characters,
 which is pretty tedious. That's why I've also added a full preorder traversal of
 the components with their meanings.
 
-![Sample note](/ultimate_anki_note_preview.png)
+![Sample note](./ultimate_anki_note_preview.png)
 
 After having fought for two days straight with Python's (nonexistent?)
 type-system, you can now access the finished result

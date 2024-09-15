@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     utils.url = "github:numtide/flake-utils";
     hugo-theme = {
-      url = "github:luizdepra/hugo-coder";
+      url = "github:adityatelange/hugo-PaperMod";
       flake = false;
     };
     # Removed hugo-config, content, and static from inputs
@@ -33,7 +33,7 @@
 
           buildPhase = ''
             mkdir -p themes
-            ln -s ${inputs.hugo-theme} themes/hugo-coder
+            ln -s ${inputs.hugo-theme} themes/PaperMod
 
             # Copy hugo.toml directly from src
             cp ${self}/hugo.toml hugo.toml

@@ -3,16 +3,16 @@
     "hugo-theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1725849660,
-        "narHash": "sha256-Sm2EF2frd4MCYHvXG1Mn6qSFlHONr7GAFPk9aR776kk=",
-        "owner": "luizdepra",
-        "repo": "hugo-coder",
-        "rev": "4e8ce4a6a09c7f32548c5c33b532dcbbccc355b0",
+        "lastModified": 1726387912,
+        "narHash": "sha256-JH2pPmY4dd9aPl0FDTSXG7zznoCOezEk3kmIlcS/UwI=",
+        "owner": "adityatelange",
+        "repo": "hugo-PaperMod",
+        "rev": "a2eb47bb4b805116dcd34c1605d39835121f8dbe",
         "type": "github"
       },
       "original": {
-        "owner": "luizdepra",
-        "repo": "hugo-coder",
+        "owner": "adityatelange",
+        "repo": "hugo-PaperMod",
         "type": "github"
       }
     },
