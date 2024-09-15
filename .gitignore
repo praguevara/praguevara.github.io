@@ -1,6 +1,2 @@
-_site/
-.*
-!.gitignore
-Gemfile
-Gemfile.lock
-vendor/
+.direnv/
+result/
