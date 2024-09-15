@@ -5,7 +5,7 @@ theme = "hugo-coder"
 defaultContentLanguage = "en"
 
 [params]
-author = "praguevara"
+author = "Pablo Ramón Guevara"
 avatarURL = "images/avatar.jpg"
 description = "praguevara's site"
 keywords = "blog,developer,personal"
@@ -32,3 +32,14 @@ languageName = ":uk:"
 name = "Blog"
 weight = 1
 url = "/posts"
+
+[[languages.en.menu.main]]
+name = "About"
+weight = 2
+url = "/about"
+
+[[languages.en.menu.main]]
+name = "CV"
+weight = 3
+url = "/cv"
+

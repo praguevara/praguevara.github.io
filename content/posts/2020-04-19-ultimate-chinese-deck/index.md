@@ -4,8 +4,7 @@ date: 2020-04-19
 draft: false
 ---
 
-After having stopped for almost a month with my Anki revisions, and bored in isolation,
-I run into [Loach JC, Wang J (2016) Optimizing the Learning Order of Chinese CharactersUsing a Novel Topological Sort Algorithm](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0163623), which is supposed to outperform previous algorithms, such as [Yan X, Fan Y, Di Z, Havlin S, Wu J (2013) Efficient Learning Strategy of Chinese Characters Bahsed on Network Approach](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0069745), which is the one used in _3000 Hanzi to learn first_, which I already wrote about in a previous [post]({{< ref "posts/2020-02-27-learning-chinese" >}}).
+After having stopped for almost a month with my Anki revisions, and bored in isolation, I run into [Loach JC, Wang J (2016) Optimizing the Learning Order of Chinese Characters Using a Novel Topological Sort Algorithm](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0163623), which is supposed to outperform previous algorithms, such as [Yan X, Fan Y, Di Z, Havlin S, Wu J (2013) Efficient Learning Strategy of Chinese Characters Bahsed on Network Approach](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0069745), which is the one used in _3000 Hanzi to learn first_, which I already wrote about in a previous [post]({{< ref "posts/2020-02-27-learning-chinese" >}}).
 
 So, being bored, I decided to return to learning Chinese with a newer Anki deck.
 
