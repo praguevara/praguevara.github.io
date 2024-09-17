@@ -13,25 +13,18 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Install Nix
-        uses: cachix/install-nix-action@v25
+        uses: cachix/install-nix-action@v27
         with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          nix_path: nixpkgs=channel:nixos-24.05
           extra_nix_config: |
-            experimental-features = nix-command flakes
-
-      - name: Cache Nix store
-        uses: actions/cache@v3
-        with:
-          path: /nix/store
-          key: ${{ runner.os }}-nix-${{ hashFiles('**/flake.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-nix-
+            trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
+            substituters = https://hydra.iohk.io https://cache.nixos.org/
 
       - name: Build Site with Nix
-        run: nix build
+        run: nix build .#website
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
