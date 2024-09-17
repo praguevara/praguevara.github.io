@@ -33,17 +33,6 @@ Here are a few technologies I've been enjoying working with lately:
 - Svelte
 - TailwindCSS
 
-## Books
-
-I've been reading a lot of [ratfic](https://tvtropes.org/pmwiki/pmwiki.php/Main/RationalFic) lately as well. Here are some of my favorite books:
-
-- [Harry Potter and the Methods of Rationality](https://hpmor.com/)
-- [Pokemon the Origin of Species](https://daystareld.com/pokemon/)
-- [Octo](https://zalbert.net/octo/)
-- [Unsong](https://unsongbook.com/)
-- [Worth the Candle](https://www.royalroad.com/fiction/25137/worth-the-candle)
-- [Mother of Learning](https://www.royalroad.com/fiction/21220/mother-of-learning)
-
 ## Blogs and websites
 
 Here are some of my favorite blogs and websites:
@@ -53,6 +42,7 @@ Here are some of my favorite blogs and websites:
 - [Slate Star Codex](https://slatestarcodex.com/)
 - [Astral Codex Ten](https://astralcodexten.substack.com/)
 - [LessWrong](https://www.lesswrong.com/)
+- [Gwern](https://gwern.net/)
 
 ### Programming
 
@@ -78,3 +68,14 @@ Other interventions include:
 
 - Resistence training
 - Sleep hygiene: after 00:00 no electronics.
+
+## Books
+
+I've been reading a lot of [ratfic](https://tvtropes.org/pmwiki/pmwiki.php/Main/RationalFic) lately as well. Here are some of my favorite books:
+
+- [Harry Potter and the Methods of Rationality](https://hpmor.com/)
+- [Pokemon the Origin of Species](https://daystareld.com/pokemon/)
+- [Octo](https://zalbert.net/octo/)
+- [Unsong](https://unsongbook.com/)
+- [Worth the Candle](https://www.royalroad.com/fiction/25137/worth-the-candle)
+- [Mother of Learning](https://www.royalroad.com/fiction/21220/mother-of-learning)
