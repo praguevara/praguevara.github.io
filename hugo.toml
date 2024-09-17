@@ -20,7 +20,7 @@ ShowToc = true
 enabled = true
 title = "Pablo Ramón Guevara"
 subtitle = "Computer Engineer"
-imageUrl = "images/avatar.jpg"
+imageUrl = "images/avatar.webp"
 imageTitle = "portrait"
 
 [[params.socialIcons]]
