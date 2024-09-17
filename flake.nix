@@ -8,59 +8,87 @@
       url = "github:adityatelange/hugo-PaperMod";
       flake = false;
     };
-    # Removed hugo-config, content, and static from inputs
   };
 
-  outputs = inputs@{ self, nixpkgs, utils, ... }:
-    utils.lib.eachSystem [
-      utils.lib.system.x86_64-darwin
-      utils.lib.system.x86_64-linux
-      utils.lib.system.aarch64-darwin
-      utils.lib.system.aarch64-linux
-    ]
-    (system:
-      let
-        pkgs = import nixpkgs {
-          inherit system;
-        };
-      in
-      rec {
-        packages.website = pkgs.stdenv.mkDerivation {
-          name = "website";
-          src = self;  # 'self' refers to the flake's source
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      utils,
+      ...
+    }:
+    utils.lib.eachSystem
+      [
+        utils.lib.system.x86_64-darwin
+        utils.lib.system.x86_64-linux
+        utils.lib.system.aarch64-darwin
+        utils.lib.system.aarch64-linux
+      ]
+      (
+        system:
+        let
+          pkgs = import nixpkgs {
+            inherit system;
+          };
+        in
+        {
+          packages.website = pkgs.stdenv.mkDerivation {
+            name = "website";
+            src = self; # 'self' refers to the flake's source
 
-          buildInputs = [ pkgs.git pkgs.nodePackages.prettier ];
+            buildInputs = [
+              pkgs.git
+              pkgs.nodePackages.prettier
+              (pkgs.texlive.combine {
+                inherit (pkgs.texlive)
+                  scheme-basic
+                  etoolbox
+                  enumitem
+                  underscore
+                  parskip
+                  xcolor
+                  sectsty
+                  ;
+              })
+            ];
 
-          buildPhase = ''
-            mkdir -p themes
-            ln -s ${inputs.hugo-theme} themes/PaperMod
+            buildPhase = ''
+              # Generate the PDF from cv.md
+              ${pkgs.pandoc}/bin/pandoc ${self}/content/cv/cv.md -o static/pablo_ramon_guevara_cv.pdf --template ${self}/jb2resume.latex
 
-            # Copy hugo.toml directly from src
-            cp ${self}/hugo.toml hugo.toml
+              mkdir -p themes
+              ln -s ${inputs.hugo-theme} themes/PaperMod
 
-            # Copy content and static directories directly from src
-            cp -r ${self}/content/ content/
-            cp -r ${self}/static/ static/
+              # Copy hugo.toml directly from src
+              cp ${self}/hugo.toml hugo.toml
 
-            ${pkgs.hugo}/bin/hugo --logLevel info
-            ${pkgs.nodePackages.prettier}/bin/prettier -w public '!**/*.{js,css}'
-          '';
+              # Copy content and static directories directly from src
+              cp -r ${self}/content/ content/
+              cp -r ${self}/static/ static/
 
-          installPhase = ''
-            mkdir -p $out
-            cp -r public/* $out/
-          '';
-        };
+              ${pkgs.hugo}/bin/hugo --logLevel info
+              ${pkgs.nodePackages.prettier}/bin/prettier -w public '!**/*.{js,css}'
+            '';
 
-        defaultPackage = self.packages.${system}.website;
+            installPhase = ''
+              mkdir -p $out
+              cp -r public/* $out/
+            '';
+          };
 
-        apps = rec {
-          hugo = utils.lib.mkApp { drv = pkgs.hugo; };
-          default = hugo;
-        };
+          defaultPackage = self.packages.${system}.website;
 
-        devShell = pkgs.mkShell {
-          buildInputs = [ pkgs.nixpkgs-fmt pkgs.hugo ];
-        };
-      });
+          apps = rec {
+            hugo = utils.lib.mkApp { drv = pkgs.hugo; };
+            default = hugo;
+          };
+
+          devShell = pkgs.mkShell {
+            buildInputs = [
+              pkgs.nixpkgs-fmt
+              pkgs.hugo
+            ];
+          };
+        }
+      );
 }

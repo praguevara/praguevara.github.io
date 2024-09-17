@@ -6,16 +6,12 @@ left-column:
   - "Computer Engineer"
   - "[praguevara@gmail.com](mailto:praguevara@gmail.com)"
   - "+34 603 445 333"
+  - "Last Updated: September 2024"
 right-column:
+  - "[Website](https://www.praguevara.dev)"
   - "[GitHub](https://github.com/praguevara)"
   - "[LinkedIn](https://www.linkedin.com/in/pablo-ram%C3%B3n-guevara-498283165/)"
-  - "Last Updated: June 2024"
-
-title: "Curriculum Vitae"
-slug: "cv"
 ---
-
-> Download the PDF version [here](/pablo_ramon_guevara_cv.pdf)
 
 # Summary
 
