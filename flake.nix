@@ -37,8 +37,9 @@
             src = self; # 'self' refers to the flake's source
 
             buildInputs = [
-              pkgs.git
               pkgs.nodePackages.prettier
+              pkgs.pandoc
+              pkgs.hugo
               (pkgs.texlive.combine {
                 inherit (pkgs.texlive)
                   scheme-basic
@@ -54,7 +55,7 @@
 
             buildPhase = ''
               # Generate the PDF from cv.md
-              ${pkgs.pandoc}/bin/pandoc ${self}/content/cv/cv.md -o static/pablo_ramon_guevara_cv.pdf --template ${self}/jb2resume.latex
+              pandoc ${self}/content/cv/cv.md -o static/pablo_ramon_guevara_cv.pdf --template ${self}/jb2resume.latex
 
               mkdir -p themes
               ln -s ${inputs.hugo-theme} themes/PaperMod
@@ -66,27 +67,26 @@
               cp -r ${self}/content/ content/
               cp -r ${self}/static/ static/
 
-              ${pkgs.hugo}/bin/hugo --logLevel info
-              ${pkgs.nodePackages.prettier}/bin/prettier -w public '!**/*.{js,css}'
+              hugo
+              prettier -w public '!**/*.{js,css}'
             '';
 
             installPhase = ''
               mkdir -p $out
-              cp -r public/* $out/
+              cp -r public/. $out/
             '';
           };
 
           defaultPackage = self.packages.${system}.website;
 
-          apps = rec {
-            hugo = utils.lib.mkApp { drv = pkgs.hugo; };
-            default = hugo;
-          };
+          apps.default = utils.lib.mkApp { drv = self.packages.${system}.website; };
 
           devShell = pkgs.mkShell {
             buildInputs = [
               pkgs.nixpkgs-fmt
               pkgs.hugo
+              pkgs.pandoc
+              pkgs.nodePackages.prettier
             ];
           };
         }
