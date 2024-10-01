@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "hugo-theme": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1726387912,
-        "narHash": "sha256-JH2pPmY4dd9aPl0FDTSXG7zznoCOezEk3kmIlcS/UwI=",
-        "owner": "adityatelange",
-        "repo": "hugo-PaperMod",
-        "rev": "a2eb47bb4b805116dcd34c1605d39835121f8dbe",
-        "type": "github"
-      },
-      "original": {
-        "owner": "adityatelange",
-        "repo": "hugo-PaperMod",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1726320982,
@@ -34,8 +18,8 @@
     },
     "root": {
       "inputs": {
-        "hugo-theme": "hugo-theme",
         "nixpkgs": "nixpkgs",
+        "theme": "theme",
         "utils": "utils"
       }
     },
@@ -51,6 +35,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "theme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1727386410,
+        "narHash": "sha256-ZnwFzd5Wb7MMeYwIz+PtQ4Ft2PO0Ecz2/D9ILwrAafQ=",
+        "owner": "welpo",
+        "repo": "tabi",
+        "rev": "02f9d88236bde558c9058e13ebb89f1337a592f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "welpo",
+        "repo": "tabi",
         "type": "github"
       }
     },

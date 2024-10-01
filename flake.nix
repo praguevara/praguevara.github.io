@@ -4,8 +4,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     utils.url = "github:numtide/flake-utils";
-    hugo-theme = {
-      url = "github:adityatelange/hugo-PaperMod";
+    theme = {
+      url = "github:welpo/tabi";
       flake = false;
     };
   };
@@ -39,7 +39,7 @@
             buildInputs = [
               pkgs.nodePackages.prettier
               pkgs.pandoc
-              pkgs.hugo
+              pkgs.zola
               (pkgs.texlive.combine {
                 inherit (pkgs.texlive)
                   scheme-basic
@@ -58,16 +58,16 @@
               pandoc ${self}/content/cv/cv.md -o static/pablo_ramon_guevara_cv.pdf --template ${self}/jb2resume.latex
 
               mkdir -p themes
-              ln -s ${inputs.hugo-theme} themes/PaperMod
+              ln -s ${inputs.theme} themes/tabi
 
-              # Copy hugo.toml directly from src
-              cp ${self}/hugo.toml hugo.toml
+              # Copy config.toml directly from src
+              cp ${self}/config.toml config.toml
 
-              # Copy content and static directories directly from src
               cp -r ${self}/content/ content/
+              cp -r ${self}/templates/ templates/
               cp -r ${self}/static/ static/
 
-              hugo
+              zola build
               prettier -w public '!**/*.{js,css}'
             '';
 
@@ -84,10 +84,15 @@
           devShell = pkgs.mkShell {
             buildInputs = [
               pkgs.nixpkgs-fmt
-              pkgs.hugo
+              pkgs.zola
               pkgs.pandoc
               pkgs.nodePackages.prettier
             ];
+
+            shellHook = ''
+              mkdir -p themes
+              ln -s ${inputs.theme} themes/tabi
+            '';
           };
         }
       );

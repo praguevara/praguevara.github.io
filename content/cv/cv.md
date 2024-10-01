@@ -68,12 +68,10 @@ I'm a Computer Engineer from Spain with a degree from the [University of Alicant
 
 # Education
 
-- **Computer Engineering Degree** (Computing Specialty) | [University of Alicante](https://www.ua.es/), Spain | 2023
+- **Computer Engineering Degree** (High Performance Group, Computing Specialty) | [University of Alicante](https://www.ua.es/), Spain | 2023
 - **Computer Engineering Exchange Program** | [University of Waikato](https://www.waikato.ac.nz/), New Zealand | 2019
-- **Baccalaureate** | IES Miguel Hernández, Alicante, Spain | 2016
 
 # Additional Information
 
 - **Languages:** Spanish (Native), English (C1, Cambridge FCE), Mandarin Chinese (Beginner)
-- **Leadership:** Former scout leader at GS Gilwell, Alicante (4 years)
-- **Certifications:** Driver's License
+- **Scouting:** Former scout leader at GS Gilwell, Alicante (4 years)

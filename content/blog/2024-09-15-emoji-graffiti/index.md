@@ -1,8 +1,7 @@
----
-title: "Emoji Graffiti"
-date: 2024-09-15
-draft: false
----
++++
+title = "Emoji Graffiti"
+date = 2024-09-15
++++
 
 Since a friend told me in his company they were using Elixir, I decided to give it a try. I had heard it was a functional programming language, and although it's weakly typed, I thought it would be a good language to learn.
 
@@ -36,7 +35,7 @@ config :emoji_graffiti, EmojiGraffiti.Repo,
 
 3. **Docker Compose**: For local development and testing, I used Docker Compose to set up a PostgreSQL database. This made it easy to create a consistent development environment across different machines. Here's a snippet from the `docker-compose.yml` file:
 
-```yaml:docker-compose.yml
+```yaml
 services:
   db:
     image: postgres
@@ -49,7 +48,7 @@ services:
 
 4. **Nix**: To ensure a consistent development environment, I used Nix with a `flake.nix` configuration. This allowed me to specify all the necessary dependencies and tools:
 
-```nix:flake.nix
+```nix
 {
   description = "A flake for building development environment of Phoenix project.";
 
@@ -110,6 +109,7 @@ defmodule EmojiGraffiti.Wall do
   def get(id) when id >= 0 and id <= @max_count do
     GenServer.call(__MODULE__, {:get, id})
   end
+
 ```
 
 6. **LiveView**: The `EmojiGraffitiWeb.WallLive` module implements the LiveView functionality, handling real-time updates and user interactions:
@@ -141,6 +141,7 @@ defmodule EmojiGraffitiWeb.WallLive do
 
     {:ok, socket}
   end
+
 ```
 
 7. **PubSub**: Phoenix's PubSub system is used to broadcast emoji updates to all connected clients:
@@ -176,6 +177,7 @@ import { Picker } from "../vendor/emoji-picker-element"
     </div>
     <div class="relative max-w-screen-lg mx-auto">
       <div id="emoji-grid" phx-hook="EmojiGrid" class="grid px-4" phx-update="stream">
+
 ```
 
 10. **Deployment**: The application is deployed on Fly.io, which provides an easy-to-use platform for hosting Elixir applications.
@@ -216,4 +218,5 @@ kill_signal = 'SIGTERM'
   memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
+
 ```

@@ -1,8 +1,10 @@
----
-title: "Learning Chinese"
-date: 2020-02-27
-draft: false
----
++++
+title = "Learning Chinese"
+date = 2020-02-27
+
+[taxonomies]
+tags = ["chinese"]
++++
 
 After seeing my brother begin to learn Chinese I decided to do the same. Not for
 any specific reason in special, but just because I wanted a challenge. I suppose
