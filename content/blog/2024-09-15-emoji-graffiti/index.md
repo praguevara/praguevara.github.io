@@ -1,6 +1,9 @@
 +++
 title = "Emoji Graffiti"
 date = 2024-09-15
+
+[taxonomies]
+tags = ["elixir", "phoenix"]
 +++
 
 Since a friend told me in his company they were using Elixir, I decided to give it a try. I had heard it was a functional programming language, and although it's weakly typed, I thought it would be a good language to learn.
@@ -20,6 +23,7 @@ The site is deployed on [Fly.io](https://fly.io/) and the source code is availab
 Emoji Graffiti is built using Elixir and the Phoenix framework, which provides a robust foundation for real-time web applications. Here's a breakdown of the key technologies and components:
 
 1. **Elixir and Phoenix**: The core of the application is written in Elixir, utilizing the Phoenix framework for web development. Phoenix's LiveView feature is particularly useful for creating interactive, real-time experiences without writing complex JavaScript.
+  
 2. **PostgreSQL**: The application uses PostgreSQL as its database to store the emoji grid state. This is configured in the `config/dev.exs` file.
 
 ```elixir

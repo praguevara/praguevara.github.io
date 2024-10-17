@@ -1,6 +1,9 @@
 +++
 title = "I built a ChatGPT wrapper to phonetically transcribe text into Japanese"
 date = "2024-10-17"
+
+[taxonomies]
+tags = ["elixir", "phoenix"]
 +++
 
 ![Japanizer screenshot](./japanizer_screenshot.png)
