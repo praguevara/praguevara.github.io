@@ -174,5 +174,5 @@ socials = [
 ]
 
 [extra.analytics]
-service = "plausible"
+service = "umami"
 id = "praguevara"
