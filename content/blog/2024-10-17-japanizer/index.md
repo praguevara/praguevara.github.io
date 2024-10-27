@@ -24,7 +24,7 @@ Check it out at [Japanizer](https://japanizer.praguevara.dev)!
 - Streaming responses from OpenAI's API with [openai](https://hex.pm/packages/openai).
 - Rate limiting per IP address using [Hammer](https://github.com/ExHammer/hammer).
 - Cool and responsive design using [TailwindCSS](https://tailwindcss.com/) (I think).
-- Multi-language support and internationalization with [CLDR](https://cldr.unicode.org/index) and [Gettext](https://hexdocs.pm/gettext/readme.html). The site changes language based on the browser's locale.
+- Multi-language support and internationalization with [CLDR](https://cldr.unicode.org/index) and [Gettext](https://hexdocs.pm/gettext/Gettext.html). The site changes language based on the browser's locale.
 - Extensive telemetry and logging with [Prometheus](https://hexdocs.pm/prom_ex/readme.html), integrated into Fly.io's Grafana.
 
 ## Technology

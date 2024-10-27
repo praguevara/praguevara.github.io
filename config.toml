@@ -35,9 +35,7 @@ author = "Pablo Ramón Guevara"
 #       {name = "authors"}, # Basic definition: no feed or pagination
 #     ]
 #
-taxonomies = [
-  {name = "tags"}
-]
+taxonomies = [{ name = "tags" }]
 
 # When set to "true", a search index is built from the pages and section
 # content for `default_language`.
@@ -90,12 +88,10 @@ bottom_footnotes = false
 # Configuration of the link checker.
 [link_checker]
 # Skip link checking for external URLs that start with these prefixes
-skip_prefixes = [
-]
+skip_prefixes = []
 
 # Skip anchor checking for external URLs that start with these prefixes
-skip_anchor_prefixes = [
-]
+skip_anchor_prefixes = []
 
 # Treat internal link problems as either "error" or "warn", default is "error"
 internal_level = "error"
@@ -162,8 +158,8 @@ index_format = "elasticlunr_javascript"
 [extra]
 menu = [
   { name = "blog", url = "blog", trailing_slash = true },
-  { name = "cv", url = "cv", trailing_slash = false  },
-  { name = "about", url = "about", trailing_slash = false  },
+  { name = "cv", url = "cv", trailing_slash = false },
+  { name = "about", url = "about", trailing_slash = false },
   { name = "archive", url = "archive", trailing_slash = true },
 ]
 
@@ -171,6 +167,7 @@ socials = [
   { name = "github", url = "https://github.com/praguevara/", icon = "github" },
   { name = "x", url = "https://x.com/praguevara", icon = "x" },
   { name = "linkedin", url = "https://www.linkedin.com/in/pablo-ram%C3%B3n-guevara-498283165/", icon = "linkedin" },
+  { name = "pgp", url = "/pgp.txt", icon = "key" },
 ]
 
 [extra.analytics]

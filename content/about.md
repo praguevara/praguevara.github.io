@@ -39,7 +39,6 @@ Here are some of my favorite blogs and websites:
 - [hackernews](https://news.ycombinator.com/)
 - [advent of code](https://adventofcode.com/)
 
-
 ## Biohacking
 
 As a transhumanist, I'm bullish on the future of biohacking. For example, here are some parts of my stack:
