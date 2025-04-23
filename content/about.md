@@ -1,7 +1,7 @@
 +++
 title = "About me"
 slug = "about"
-date = 2024-09-01
+date = 2025-04-23
 +++
 
 Hello! I'm Pablo Ramón Guevara, a computer engineer from Spain. I graduated from the [University of Alicante](https://www.ua.es/) in 2023, with a degree in Computer Engineering and a specialization in computing in the High Performance group. You can read my final degree project [here](https://rua.ua.es/dspace/handle/10045/136544).
@@ -10,7 +10,7 @@ I'm passionate about functional programming, software engineering, and machine l
 
 ## Work
 
-I'm currently working as a software engineer at [Multimedia Chefs](https://www.multimediachefs.com/), a company that provides multimedia solutions for many clients.
+I'm currently working at [Commercetools](https://commercetools.com/) as a Rust Backend Engineer.
 
 Here are a few technologies I've been enjoying working with lately:
 

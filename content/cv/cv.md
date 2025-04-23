@@ -5,7 +5,7 @@ left-column:
   - "Computer Engineer"
   - "[praguevara@gmail.com](mailto:praguevara@gmail.com)"
   - "+34 603 445 333"
-  - "Last Updated: September 2024"
+  - "Last Updated: April 2025"
 right-column:
   - "[Website](https://www.praguevara.dev)"
   - "[GitHub](https://github.com/praguevara)"
@@ -20,16 +20,22 @@ I'm a Computer Engineer from Spain with a degree from the [University of Alicant
 
 - **Languages**: Python, Rust, C#, TypeScript, C, C++, Java, Kotlin, Elixir
 - **Web Technologies**: HTML, CSS (Tailwind), JavaScript (Svelte), SQL
-- **Frameworks & Tools**: Docker, Bash, Unity, AWS, Phoenix
+- **Frameworks & Tools**: Docker, Bash, Kubernetes, Unity, AWS, Phoenix
 - **Machine Learning**: PyTorch, scikit-learn, Pandas
 - **Operating Systems**: Windows, Linux (including NixOS and TrueNAS SCALE for homelab management)
 - **Others**: Functional Programming
 
 # Experience
 
+## [Commercetools](https://commercetools.com/)
+
+**Rust Backend Engineer** | 2024 - Present
+
+- Worked in a team to develop Rust services to enable GraphQL federation at the company.
+
 ## [Multimedia Chefs](https://www.multimediachefs.com)
 
-**Software Engineer** | 2019 - Present | Hybrid, Full-time
+**Software Engineer** | 2019 - 2024 | Hybrid, Full-time
 
 - Engineered an autonomous owl nest surveillance system, leveraging Raspberry Pi and solar power to stream live footage to YouTube.
 - Developed an AWS-based pipeline for generating automatic timelapses of construction sites using surveillance camera feeds.
